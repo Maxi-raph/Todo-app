@@ -70,7 +70,16 @@ body{
 .checked{
   text-decoration: line-through;
   color:white;
-  background-color: rgb(136, 136, 136);
- 
-  
+  background-color: rgb(136, 136, 136); 
 }
+@media(max-width:750px){
+#input{
+  width:64%;
+}
+.btn{
+  width:18%;
+}
+
+}
+
+
