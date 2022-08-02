@@ -41,6 +41,10 @@ button.addEventListener('click',() => {
                })
         // Adding an event to the second checkbox to delete the listItem // 
                secondCheckBox.addEventListener('click',() => {
+              if(newLi.classList === ''){
+                  Return
+             }
+              else if(newLi.classList === 'checked'){
                 listItem.style.transform = 'scale(0)'
                 if (listItem.style.transform == 'scale(0)') {
                      new Promise((resolve) =>{
@@ -49,7 +53,9 @@ button.addEventListener('click',() => {
                         },200)
                      })
                }
+            }
             })
+
         })
 
     
