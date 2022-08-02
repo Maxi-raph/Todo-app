@@ -36,15 +36,15 @@ button.addEventListener('click',() => {
         // Adding an event to the first checkbox to put a line through on the listItem //  
             firstCheckBox.addEventListener('click',() => {
                 listItem.classList.toggle('checked')
-                checkBox.style.display = 'none'
+                firstCheckBox.style.display = 'none'
                 checkBoxContainer.style.justifyContent = 'flex-end'
                })
         // Adding an event to the second checkbox to delete the listItem // 
                secondCheckBox.addEventListener('click',() => {
-              if(newLi.classList === ''){
+              if(firstCheckBox.style.display !== 'none'){
                   Return
              }
-              else if(newLi.classList === 'checked'){
+              else if(firstCheckBox.style.display === 'none'){
                 listItem.style.transform = 'scale(0)'
                 if (listItem.style.transform == 'scale(0)') {
                      new Promise((resolve) =>{
