@@ -51,21 +51,32 @@ body{
     outline: 0px;
 }
 .todo_list{
-    list-style: none;
+    list-style: none; 
 }
 .list{
+  width:200px;
+  min-height: 0px;
+  padding:8px;
+  border-radius: 8px;
+  color: white;
+  transition: 0.2s ease-in;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  overflow-x: scroll;
+}
+.list_container{
   display:flex;
   align-items: center;
   justify-content:space-between;
-  width:90%;
-  height: 40px;
-  padding:10px;
-  border-radius: 8px;
-  background-color:#775ef5;
-  color: white;
-  margin-top: 20px;
-  margin-bottom: 20px;
-  transition: 0.2s ease-in;
+   width:90%;
+   min-height:0px;
+   border-radius: 8px;
+   background-color:#775ef5;;
+   color: white;
+   margin-top: 20px;
+   margin-bottom: 20px;
+   transition: 0.2s ease-in;
 }
 .checked{
   text-decoration: line-through;
