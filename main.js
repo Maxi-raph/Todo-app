@@ -4,13 +4,13 @@ const todoList = document.querySelector('.todo_list')
 
 // Adding an event to the button to add the inputvalue to the array// 
 button.addEventListener('click',() => {
-    const inputValue = document.getElementById('input').value
+    const inputValue = document.getElementById('input')
     const arrOfObj = []
     if (inputValue === '') {
       alert('type something!')  
     }
     else{  
-       arrOfObj.push(inputValue)
+       arrOfObj.push(inputValue.value)
 
        //Creating the checbox container //
        const checkBoxContainer = document.createElement('div')
