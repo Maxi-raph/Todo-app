@@ -36,7 +36,7 @@ button.addEventListener('click',() => {
                     listItemContainer.appendChild(checkBoxContainer)
             todoList.appendChild(listItemContainer)
             inputValue = ""
-            
+            console.log(inputValue)
             
             
         // Adding an event to the first checkbox to put a line through on the listItem //  
