@@ -27,7 +27,7 @@ button.addEventListener('click',() => {
        // Looping through the array, creating listItem for each array and putting it in the todo_list //
         
             const listItem = document.createElement('p')
-            const text = document.createTextNode(inputValue)
+            const text = document.createTextNode(inputValue.value)
             listItem.classList.add('list')
             listItem.appendChild(text)
             const listItemContainer = document.createElement('div')
