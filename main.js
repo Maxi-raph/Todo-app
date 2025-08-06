@@ -28,6 +28,7 @@ button.addEventListener('click',() => {
         arrOfObj.forEach(arr => {
             const listItem = document.createElement('p')
             const text = document.createTextNode(arr)
+            inputValue = ""
             listItem.classList.add('list')
             listItem.appendChild(text)
             const listItemContainer = document.createElement('div')
