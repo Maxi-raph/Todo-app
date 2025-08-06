@@ -4,7 +4,7 @@ const todoList = document.querySelector('.todo_list')
 
 // Adding an event to the button to add the inputvalue to the array// 
 button.addEventListener('click',() => {
-    const inputValue = document.getElementById('input').value 
+    const inputValue = document.getElementById('input').value
     const arrOfObj = []
     if (inputValue === '') {
       alert('type something!')  
@@ -35,8 +35,8 @@ button.addEventListener('click',() => {
             listItemContainer.appendChild(listItem)
                     listItemContainer.appendChild(checkBoxContainer)
             todoList.appendChild(listItemContainer)
-            inputValue = ""
-            console.log(inputValue)
+            inputValue.value = ""
+         
             
             
         // Adding an event to the first checkbox to put a line through on the listItem //  
