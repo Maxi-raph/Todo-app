@@ -1,16 +1,17 @@
 const button = document.querySelector('.btn')
 const todoList = document.querySelector('.todo_list')
-
+const arrOfObj = []
 
 // Adding an event to the button to add the inputvalue to the array// 
 button.addEventListener('click',() => {
     const inputValue = document.getElementById('input')
-    const arrOfObj = []
+    
     if (inputValue === '') {
       alert('type something!')  
     }
     else{  
-       arrOfObj.push(inputValue.value)
+        let value = inputValue.value
+       arrOfObj.push(value)
 
        //Creating the checbox container //
        const checkBoxContainer = document.createElement('div')
@@ -56,6 +57,10 @@ button.addEventListener('click',() => {
                 if (listItemContainer.style.transform == 'scale(0)') {
                      new Promise((resolve) =>{
                         setTimeout( () =>{
+                            let index = arr.indexOf(value)
+                            if(value !== -1){
+                                arr.splice(index,1)
+                                }
                             resolve(todoList.removeChild(listItemContainer))
                         },200)
                      })
