@@ -25,10 +25,9 @@ button.addEventListener('click',() => {
        checkBoxContainer.appendChild(firstCheckBox)
        checkBoxContainer.appendChild(secondCheckBox)
        // Looping through the array, creating listItem for each array and putting it in the todo_list //
-        arrOfObj.forEach(arr => {
+        
             const listItem = document.createElement('p')
-            const text = document.createTextNode(arr)
-            inputValue = ""
+            const text = document.createTextNode(inputValue)
             listItem.classList.add('list')
             listItem.appendChild(text)
             const listItemContainer = document.createElement('div')
@@ -36,13 +35,17 @@ button.addEventListener('click',() => {
             listItemContainer.appendChild(listItem)
                     listItemContainer.appendChild(checkBoxContainer)
             todoList.appendChild(listItemContainer)
+            inputValue = ""
+            
+            
+            
         // Adding an event to the first checkbox to put a line through on the listItem //  
             firstCheckBox.addEventListener('click',() => {
                listItemContainer.classList.toggle('checked')
               
                 firstCheckBox.style.display = 'none'
                 checkBoxContainer.style.justifyContent = 'flex-end'
-               })
+              })
         // Adding an event to the second checkbox to delete the listItem container // 
                secondCheckBox.addEventListener('click',() => {
               if(firstCheckBox.style.display !== 'none'){
@@ -58,7 +61,7 @@ button.addEventListener('click',() => {
                      })
                }
             }
-            })
+            
 
         })
 
